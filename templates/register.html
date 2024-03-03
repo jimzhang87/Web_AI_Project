@@ -1,0 +1,63 @@
+<!-- myapp/templates/register.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Registration</title>
+    <style>
+        /* 页面布局样式 */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0; /* 设置背景颜色 */
+        }
+        .container {
+            width: 300px; /* 设置容器宽度 */
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #fff;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* 设置阴影效果 */
+        }
+        .container h2 {
+            text-align: center; /* 设置标题居中 */
+            margin-bottom: 20px; /* 设置标题与输入框的间距 */
+        }
+        input[type="text"],
+        input[type="password"],
+        input[type="submit"] {
+            width: 100%; /* 设置输入框和提交按钮宽度 */
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            box-sizing: border-box;
+        }
+        input[type="submit"] {
+            background-color: #007bff; /* 设置提交按钮背景颜色 */
+            color: #fff;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #0056b3; /* 设置提交按钮鼠标悬停时的背景颜色 */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>User Registration</h2>
+        <form method="post">
+            {% csrf_token %}
+            <input type="text" name="username" placeholder="username"><br>
+            <input type="text" name="phone_number" placeholder="Phone Number"><br>
+            <input type="text" name="password" placeholder="password"><br>
+            <input type="submit" value="Register">
+        </form>
+    </div>
+</body>
+</html>

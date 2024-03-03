@@ -1,0 +1,20 @@
+<!-- myapp/templates/registration_success.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Success</title>
+</head>
+<body>
+    <h2>Registration Successful</h2>
+    <p>Your account has been successfully registered.</p>
+    <script>
+        // 设置定时器，在3秒后跳转到其他页面
+        setTimeout(function() {
+            window.location.href = "{% url 'index' %}";
+        }, 2000);
+    </script>
+</body>
+</html>
